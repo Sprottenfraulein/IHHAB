@@ -1,0 +1,77 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+set_slime_base_melee      !   1        roll_slime_base_A 2
+set_slime_base_ranged     !   1        roll_slime_base_B 1
+
+test_chambers           >   1       100     wlt_gold_XS
+
+roll_slime_base_A       >   2       100    100     roll_supply_A          roll_wealth_A
+roll_slime_base_B       >   2       100    100     roll_supply_B          roll_wealth_A
+
+roll_supply_A           >   6       1000   1000   1000   1000   1000   1000      roll_tool_A    roll_food_A       roll_potion_A     roll_ammo_A   roll_weapon_A    roll_armor_A
+roll_supply_B           >   3       1000   1000   1000                    roll_tool_A    roll_food_A       roll_spellbook_A
+roll_wealth_A           >   5       1000   500    250    100    50        wlt_gold_XS    wlt_gold_S        wlt_gold_M        wlt_gold_L    wlt_gem_1
+
+roll_weapon_A           >   4       1000    500     1000    1000     wpn_shortsword_base    wpn_shortbow_base    wpn_pugio_base  wpn_quarterstaff_base
+roll_armor_A            >   1       1000            arm_robe_base
+roll_ammo_A             >   1       1000            amm_arrow_common
+roll_potion_A           >   1       1000            ptn_potion_red
+roll_food_A             >   1       1000            foo_apple
+roll_tool_A             >   2       1000    500     tls_lockpick   tls_tool
+roll_spellbook_A        >   2       1000    1000    spl_spellbook_heal     spl_spellbook_dispel
+
+# WEALTH
+wlt_gold_XS             !   6       id gold     item_class wlt    price   1           amount_max 9999    amount_cur  1~3         media gold
+wlt_gold_S              !   6       id gold     item_class wlt    price   1           amount_max 9999    amount_cur  5~15        media gold
+wlt_gold_M              !   6       id gold     item_class wlt    price   1           amount_max 9999    amount_cur  15~25       media gold
+wlt_gold_L              !   6       id gold     item_class wlt    price   1           amount_max 9999   amount_cur  25~35       media gold
+wlt_gem_1               !   6       id gem      item_class wlt    price   1~100       amount_max 999     amount_cur  1           media gems
+
+# FOOD
+foo_apple       !   10   id apple     item_class foo      price 1     food_value 50  charges_cur 1  charges_max 1   disposable 1     amount_max 10    amount_cur 1   media apple_red
+
+# TOOLS
+tls_lockpick    !   6     id lockpick    item_class amm   price 1     amount_cur 1~2   amount_max 99   media lockpick
+tls_tool        !   6     id tool    item_class amm   price 1     amount_cur 1~2   amount_max 99   media tool
+
+# Parameters for weapons:
+# item_class (wpn,amm,mgc,arm,hlm,shl,acc,ptn,tls,wlt,foo,spl,rsr), level, price, space (+ container), capsule (flag),
+# amount_cur(_max),
+# parameter1/2/3, value1/2/3, digits1/2/3,, damage, type, class, ranged(flag), buff, ammo_type(name), condition_cur(_max),
+# food_val, collection,  media
+
+# WEAPONS
+wpn_shortsword_base         !   12      id shortsword       level 1     item_class wpn  price 1    parameter1 dam_cut       value1 5~10    digits1 points    class fighter     condition_max 60    condition_cur 40~60   collection base_swords    media shortsword_base
+wpn_pugio_base              !   12      id pugio            level 1     item_class wpn  price 1    parameter1 dam_pierce    value1 5~10    digits1 points    class fighter,ranger,sorcerer   condition_max 60    condition_cur 40~60   collection base_daggers      media pugio_base
+wpn_quarterstaff_base       !   12      id quarterstuff     level 1     item_class wpn  price 1    parameter1 dam_bash      value1 5~10    digits1 points    class fighter,ranger,sorcerer   condition_max 60    condition_cur 40~60   collection base_staffs      media quarterstaff_base
+wpn_shortbow_base           !   14      id shortbow         level 1     item_class wpn  price 1    parameter1 dam_pierce    value1 3~6    digits1 points    class fighter,ranger     condition_max 30    condition_cur 5~20   collection base_bows      media wpn_bow_common    ranged 1    ammo_type arrow
+
+# ARMOR
+arm_robe_base               !   15      id robe             level 1     item_class arm  price 1    parameter1 def_cut   value1 1~2   digits1 points     parameter2 def_bash   value2 1~2   digits2 points    class fighter,ranger,sorcerer   condition_max 40    condition_cur 10~25 collection base_robes   media arm_robe
+
+# AMMO
+amm_arrow_common            !   12      id arrow_common     level 1     item_class amm  price 1    parameter1 dam_pierce       value1 2~4    digits1 points       amount_max 99    amount_cur 10                                collection base_arrows    media amm_arrow_common              ammo_type arrow
+
+# POTIONS
+ptn_potion_red              !   10      id potion           level 1     item_class ptn      price 10     spell spl_heal     charges_cur 1  charges_max 1   disposable 1     amount_max 10    amount_cur 1   media potion_red
+
+# CONTAINERS
+cnt_chest_common            !   8       id chest                        item_class cnt  price 1    space 10    collection common_chests    media chest                              condition_max 100    condition_cur 100
+cnt_sack_onetime            !   8       id sack                         item_class cnt  price 0    space 999   capsule 1     media sack                                             condition_max 1      condition_cur 1
+
+# SPELLBOOKS
+spl_spellbook_heal          !   9       id spellbook        level 1     item_class spl  price 100  spell spl_heal   charges_cur 1   charges_max 1   disposable 1    media spellbook_heal
+spl_spellbook_dispel        !   9       id spellbook        level 1     item_class spl  price 100  spell spl_dispel charges_cur 1   charges_max 1   disposable 1    media spellbook_dispel
+
+# MAGIC ITEMS
+mgc_rod_dispel              !   9      id rod              level 1     item_class mgc      price 1     spell spl_dispel     charges_cur 3  charges_max 3   disposable 1     media mgc_rod_dispel
+
+# SPECIALS
+sys_savebook        !   8       id savebook        level 1     item_class sys  price 0  charges_cur -1   charges_max -1   curse -1  media sys_savebook
+

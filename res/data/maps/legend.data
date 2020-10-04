@@ -1,0 +1,6 @@
+# all dungeon objects description. In description all spaces should be replaced by underscore. Format:
+# <tile name>=<animation name> <put_ingame_description_here>
+%=in_test_wall 1 wall
+.=in_test_floor 0 floor
+0=in_test_hallway 0 tunnel
+d=in_test_door_closed in_test_door_open common tunnel

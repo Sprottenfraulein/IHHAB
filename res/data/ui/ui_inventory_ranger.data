@@ -1,0 +1,166 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0 0 -1 -0.5
+# text
+# id, x, y, font, size, color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y, caption
+
+# inventory item amount for stackables
+dyn_text=ammo_amount 2.4 1.6 default 14 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv0 2.1 6.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv1 3.1 6.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv2 4.1 6.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv3 5.1 6.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv4 2.1 7.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv5 3.1 7.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv6 4.1 7.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv7 5.1 7.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv8 2.1 8.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv9 3.1 8.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv10 4.1 8.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+dyn_text=inv11 5.1 8.1 default 16 255,255,255 132,126,135 left top 1 0.5 -1 0 0
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+tile=0 0 5 8.5
+1.5,1
+ui_inv_fighter
+
+# equipped items
+tr_tile=equip_ammo_slot 0 0 1 1 1
+2.3,1.5
+default=ui_empty
+
+# equipped items
+tr_tile=equip_main_hand 0 0 1 1 1
+2.3,2.7
+default=ui_empty
+
+tr_tile=equip_off_hand 0 0 1 1 1
+4.7,2.7
+default=ui_empty
+
+tr_tile=equip_head 0 0 1 1 1
+3.5,1.5
+default=ui_empty
+
+tr_tile=equip_chest 0 0 1 1 1
+3.5,2.7
+default=ui_empty
+
+tr_tile=equip_ring1 0 0 1 1 1
+2.3,3.9
+default=ui_empty
+
+tr_tile=equip_ring2 0 0 1 1 1
+4.7,3.9
+default=ui_empty
+
+#INVENTORY
+tr_tile=inv_item-0 0 0 1 1 1
+2,6
+default=ui_empty
+
+tr_tile=inv_item-1 0 0 1 1 1
+3,6
+default=ui_empty
+
+tr_tile=inv_item-2 0 0 1 1 1
+4,6
+default=ui_empty
+
+tr_tile=inv_item-3 0 0 1 1 1
+5,6
+default=ui_empty
+
+tr_tile=inv_item-4 0 0 1 1 1
+2,7
+default=ui_empty
+
+tr_tile=inv_item-5 0 0 1 1 1
+3,7
+default=ui_empty
+
+tr_tile=inv_item-6 0 0 1 1 1
+4,7
+default=ui_empty
+
+tr_tile=inv_item-7 0 0 1 1 1
+5,7
+default=ui_empty
+
+tr_tile=inv_item-8 0 0 1 1 1
+2,8
+default=ui_empty
+
+tr_tile=inv_item-9 0 0 1 1 1
+3,8
+default=ui_empty
+
+tr_tile=inv_item-10 0 0 1 1 1
+4,8
+default=ui_empty
+
+tr_tile=inv_item-11 0 0 1 1 1
+5,8
+default=ui_empty
+
+# close container button
+tr_tile=cont_close 0 0 0.4 0.3 1
+5.6,5.7
+default=ui_cont_close_default
+mouse_down=ui_cont_close_pressed
+mouse_up=ui_cont_close_default
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+# equipped
+trigger=equip_ammo_slot 1.5,2.3,2.5,3.3 97
+trigger=equip_main_hand 2.7,2.3,3.7,3.3 97
+trigger=equip_off_hand 2.7,4.7,3.7,5.7 97
+trigger=equip_head 1.5,3.5,2.5,4.5 97
+trigger=equip_chest 2.7,3.5,3.7,4.5 97
+trigger=equip_ring1 3.9,2.3,4.9,3.3 97
+trigger=equip_ring2 3.9,4.7,4.9,5.7 97
+# inventory
+trigger=inv_item-0 6,2,7,3 97
+trigger=inv_item-1 6,3,7,4 97
+trigger=inv_item-2 6,4,7,5 97
+trigger=inv_item-3 6,5,7,6 97
+trigger=inv_item-4 7,2,8,3 97
+trigger=inv_item-5 7,3,8,4 97
+trigger=inv_item-6 7,4,8,5 97
+trigger=inv_item-7 7,5,8,6 97
+trigger=inv_item-8 8,2,9,3 97
+trigger=inv_item-9 8,3,9,4 97
+trigger=inv_item-10 8,4,9,5 97
+trigger=inv_item-11 8,5,9,6 97
+# close container
+trigger=cont_close 5.7,5.6,6,6 97
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+sound=equip_ammo_slot-mouse_up tun
+sound=equip_main_hand-mouse_up tun
+sound=equip_off_hand-mouse_up tun
+sound=equip_head-mouse_up tun
+sound=equip_chest-mouse_up tun
+sound=equip_ring1-mouse_up tun
+sound=equip_ring2-mouse_up tun
+# inventory
+sound=inv_item-0-mouse_up tun
+sound=inv_item-1-mouse_up tun
+sound=inv_item-2-mouse_up tun
+sound=inv_item-3-mouse_up tun
+sound=inv_item-4-mouse_up tun
+sound=inv_item-5-mouse_up tun
+sound=inv_item-6-mouse_up tun
+sound=inv_item-7-mouse_up tun
+sound=inv_item-8-mouse_up tun
+sound=inv_item-9-mouse_up tun
+sound=inv_item-10-mouse_up tun
+sound=inv_item-11-mouse_up tun
+# close container
+sound=cont_close-mouse_down click_high
+sound=cont_close-mouse_up click_high

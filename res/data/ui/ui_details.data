@@ -1,0 +1,21 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=1 -1 -1 0 0
+# text
+# x, y, font, size, color, h_align, v_align, timer, max_width, max_height, mov_x, mov_y, caption
+# dynamic text. item title, etc.
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+tile=0 0 3 4
+0,0
+ui_scroll_flat
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+

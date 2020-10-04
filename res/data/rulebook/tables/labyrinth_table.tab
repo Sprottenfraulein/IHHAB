@@ -1,0 +1,26 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+test_chambers1                 !     15      bld_alg halls    anim_set lab_brick1   mob_set basement01   mob_types 3   crowd_offset 0   room_w_min 4    room_w_max 6    room_h_min 6    room_h_max 10    lab_w 50    lab_h 50    room_tries 20      trap_set traps_basement1     trap_types 3   trap_chance 20
+test_chambers2                 !     15      bld_alg halls    anim_set lab_brick1   mob_set basement01   mob_types 3   crowd_offset 0   room_w_min 3    room_w_max 4    room_h_min 3    room_h_max 4    lab_w 50    lab_h 50    room_tries 20      trap_set traps_basement1     trap_types 3   trap_chance 20
+test_chambers3                 !     15      bld_alg maze    anim_set lab_brick1   mob_set basement02   mob_types 3   crowd_offset 100   room_w_min 3    room_w_max 4    room_h_min 3    room_h_max 4    lab_w 30    lab_h 30    room_tries 50      trap_set traps_basement1     trap_types 3   trap_chance 30
+
+
+test_chambers_doors             >   4       100     100     100     50        doorway     common_door     common_locked_door      common_m_lock_door
+
+common_m_lock_door              !   6       name    common_door     closed  1   lock    1   hidden  0   m_lock  1   media door_wood_common
+common_locked_door              !   6       name    common_door     closed  1   lock    1   hidden  0   m_lock  0   media door_wood_common
+common_door                     !   6       name    common_door     closed  1   lock    0   hidden  0   m_lock  0   media door_wood_common
+doorway                         !   6       name    common_doorway  closed  -1  lock    0   hidden  0   m_lock  0   media doorway_wood_common
+
+# trap attack is an index to combat_table entry
+traps_basement1        >    1    100   trap_base1
+
+trap_base1             !    5    attack att_slime_base_touch     damage_multiplier 2     m_trap 0   hidden 1    charges 1    media trap_base
+
+stairs                 !    1    media stairs_common

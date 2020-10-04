@@ -1,0 +1,15 @@
+# Game parameters for player character class (ability scores, action points, etc.)
+# animations
+anim_set=./res/data/anims/sets/pc/test_class.data
+# stats
+name=Tester
+level=30
+strength=10
+dexterity=10
+intelligence=10
+hp_max=100
+mp_max=100
+ap_max=1
+bp_max=10
+# starting items (index in tables)
+inventory=tester

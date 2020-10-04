@@ -1,0 +1,174 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0.5 0.5 -0.2 1.5
+# text
+text=0 -6 default 28 255,255,255 132,126,135 center middle 7 0.5 -1 0 0 Choose_a_hero_to_continue:
+
+text=-2.55 2.2 default 22 255,255,255 132,126,135 center top 2.5 0.5 -1 0 0 <_Back
+text=0.7 2.2 default 22 255,255,255 132,126,135 center top 2.5 0.5 -1 0 0 Delete
+text=3.75 2.2 default 22 255,255,255 132,126,135 center top 2.5 0.5 -1 0 0 Load_>
+
+dyn_text=save-0 -5 -5.4  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-1 -5 -4.9    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-2 -5 -4.4  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-3 -5 -3.9    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-4 -5 -3.4  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-5 -5 -2.9    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-6 -5 -2.4  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-7 -5 -1.9    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-8 -5 -1.4  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-9 -5 -0.9    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-10 -5 -0.4 default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-11 -5 0    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-12 -5 0.5  default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+dyn_text=save-13 -5 1    default 18 255,255,255 105,106,106 left top 7 0.5 -1 0 0
+
+# tiles
+# trigger_id (for tr_tiles), mirrored, flipped, width, height, number of rows (for tr_tiles) - animations
+# background
+tile=0 0 20 13.3
+-9.8,-8.15
+ui_title_bg
+
+tile=0 0 17.5 10
+-8.5,-6.5
+ui_tileset_stone_field_area
+
+tile=0 0 0.5 0.5
+-9,-7
+ui_tileset_stone_corner_lt
+
+tile=0 0 0.5 0.5
+9,-7
+ui_tileset_stone_corner_rt
+
+tile=0 0 0.5 0.5
+-9,3
+ui_tileset_stone_corner_lb
+
+tile=0 0 0.5 0.5
+9,3
+ui_tileset_stone_corner_rb
+
+tile=0 0 2.5 0.5
+-8.5,-7 -6,-7 -3.5,-7 -1,-7 1.5,-7 4,-7 6.5,-7
+ui_tileset_stone_edge_top
+
+tile=0 0 2.5 0.5
+-8.5,3 -6,3 -3.5,3 -1,3 1.5,3 4,3 6.5,3
+ui_tileset_stone_edge_bottom
+
+tile=0 0 0.5 2.5
+-9,-6.5 -9,-4.5 -9,-2 -9,0.5
+ui_tileset_stone_edge_left
+
+tile=0 0 0.5 2.5
+9,-6.5 9,-4.5 9,-2 9,0.5
+ui_tileset_stone_edge_right
+
+tile=0 0 0.5 0.5
+3,-2.75
+ui_tileset_scroll_corner_lt
+
+tile=0 0 2 0.5
+3.5,-2.75
+ui_tileset_scroll_edge_top
+
+tile=0 0 0.5 0.5
+5,-2.75
+ui_tileset_scroll_corner_rt
+
+tile=0 0 0.5 2
+3,-2.25 3,-0.75
+ui_tileset_scroll_edge_left
+
+tile=0 0 0.5 2
+5,-2.25 5,-0.75
+ui_tileset_scroll_edge_right
+
+tile=0 0 2 0.5
+3.5,1
+ui_tileset_scroll_edge_bottom
+
+tile=0 0 0.5 0.5
+3,1
+ui_tileset_scroll_corner_lb
+
+tile=0 0 0.5 0.5
+5,1
+ui_tileset_scroll_corner_rb
+
+tile=0 0 1.5 3.5
+3.5,-2.25
+ui_tileset_scroll_area
+
+tile=0 0 0.5 0.5
+-5.15,-5.5 -5.15,-5 -5.15,-4.5 -5.15,-4 -5.15,-3.5 -5.15,-3 -5.15,-2.5 -5.15,-2 -5.15,-1.5 -5.15,-1 -5.15,-0.5 -5.15,0 -5.15,0.5 -5.15,1
+ui_tileset_stone_bevel_left
+
+tile=0 0 6.5 0.5
+-4.65,-5.5 -4.65,-5 -4.65,-4.5 -4.65,-4 -4.65,-3.5 -4.65,-3 -4.65,-2.5 -4.65,-2 -4.65,-1.5 -4.65,-1 -4.65,-0.5 -4.65,0 -4.65,0.5 -4.65,1
+ui_tileset_stone_bevel_center
+
+tile=0 0 0.5 0.5
+1.65,-5.5 1.65,-5 1.65,-4.5 1.65,-4 1.65,-3.5 1.65,-3 1.65,-2.5 1.65,-2 1.65,-1.5 1.65,-1 1.65,-0.5 1.65,0 1.65,0.5 1.65,1
+ui_tileset_stone_bevel_right
+
+# active tiles
+tr_tile=portrait 0 0 2.5 2.5 1
+3,-5.5
+default=ui_class_portrait_fighter_color
+
+# active tiles
+tr_tile=bttn_title 0 0 2.5 0.5 3
+-4.35,2.15
+default=ui_button_stone_default
+mouse_up=ui_button_stone_default
+mouse_down=ui_button_stone_pressed
+
+tr_tile=bttn_delete 0 0 2.5 0.5 3
+-1.25,2.15
+default=ui_button_stone_default
+mouse_up=ui_button_stone_default
+mouse_down=ui_button_stone_pressed
+
+tr_tile=bttn_load 0 0 2.5 0.5 3
+1.85,2.15
+default=ui_button_stone_default
+mouse_up=ui_button_stone_default
+mouse_down=ui_button_stone_pressed
+
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+trigger=bttn_title 2.15,-4.35,2.65,-1.85 97
+trigger=bttn_delete 2.15,-1.25,2.65,1.25 97
+trigger=bttn_load 2.15,1.85,2.65,4.35 97
+trigger=portrait -5.5,3,-4.5,4 97
+
+trigger=save-0   -5.5,-5.15,-5,2.15 97
+trigger=save-1   -5,-5.15,-4.5,2.15 97
+trigger=save-2   -4.5,-5.15,-4,2.15 97
+trigger=save-3   -4,-5.15,-3.5,2.15 97
+trigger=save-4   -3.5,-5.15,-3,2.15 97
+trigger=save-5   -3,-5.15,-2.5,2.15 97
+trigger=save-6   -2.5,-5.15,-2,2.15 97
+trigger=save-7   -2,-5.15,-1.5,2.15 97
+trigger=save-8   -1.5,-5.15,-1,2.15 97
+trigger=save-9   -1,-5.15,-0.5,2.15 97
+trigger=save-10   -0.5,-5.15,0,2.15 97
+trigger=save-11   0,-5.15,0.5,2.15 97
+trigger=save-12   0.5,-5.15,1,2.15 97
+trigger=save-13   1,-5.15,1.5,2.15 97
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+sound=bttn_title-mouse_down click_high
+sound=bttn_delete-mouse_down click_high
+sound=bttn_load-mouse_down click_high
+sound=bttn_title-mouse_up click_on
+sound=bttn_delete-mouse_up click_on
+sound=bttn_load-mouse_up click_on
+
+# sounds
+

@@ -1,0 +1,63 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+apple_red           !   2   pickup collect01    use consume01
+gold                !   1   pickup gold_pickup
+gems                !   1   pickup gem_pickup
+
+lockpick            !   1   pickup tiny_needle
+tool                !   1   pickup tiny_needle
+
+shortsword_base     !   1   pickup sword_pickup
+pugio_base          !   1   pickup sword_pickup
+quarterstaff_base   !   1   pickup tun
+wpn_bow_common      !   1   pickup pc_step01
+
+arm_robe            !   1   pickup soft_noise
+
+amm_arrow_common    !   1   pickup pc_step01
+
+# magic items
+mgc_rod_dispel      !   2   pickup tiny_needle    use tiny_needle
+
+# potions
+potion_red          !   2   pickup collect01    use asc_bubbles
+
+spellbook_heal      !   2   pickup tun     use gem_pickup
+spellbook_dispel    !   2   pickup tun     use gem_pickup
+
+chest               !   1   pickup pc_step01
+sack                !   1   pickup pc_step01
+
+mob_slime_base_blue      !   4   walk pc_step02      hit pc_step02     attack pc_step01    dead deep_bash
+mob_slime_base_purple      !   4   walk pc_step02      hit pc_step02     attack pc_step01    dead deep_bash
+
+pc_test             !   1   walk pc_step03      dead magic_ringing
+
+pc_fighter          !   2   walk pc_step03      dead magic_ringing
+pc_ranger           !   2   walk pc_step03      dead magic_ringing
+pc_sorcerer         !   2   walk pc_step03      dead magic_ringing
+
+door_wood_common    !   5   open operate_mech      m_lock magic_ringing     unlock_success unlock     unlock_fail tiny_metal_break    no_lockpick locked
+doorway_wood_common !   0
+
+#status effects
+st_test             !   2   start magic_ringing   end disappear_hard
+pc_hp_low           !   2   start tiny_needle   end tiny_needle
+pc_food_low         !   2   start tiny_needle   end tiny_needle
+
+#spells
+spl_healing_food    !   1   cast soft_spring
+spl_heal            !   1   cast soft_spring_rich
+spl_dispel          !   1   cast signal
+
+# traps
+trap_base           !   2   disarm_success click_off     discharge energy_blast     reveal click_high
+
+# special
+sys_savebook        !   2   pickup tun     use tiny_needle

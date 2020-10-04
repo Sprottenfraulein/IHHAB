@@ -1,0 +1,66 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0.5 0.5 0 1
+# text
+text=0 -0.05 default 22 255,255,255 80,70,80 center middle 4.7 0.5 -1 0 0 Start_a_new_adventure
+text=0 0.95 default 22 255,255,255 80,70,80 center middle 4.2 0.5 -1 0 0 Continue_adventure
+text=-0.2 1.95 default 22 255,255,255 80,70,80 center middle 3 0.5 -1 0 0 Heroes_memorial
+text=-0.3 2.95 default 22 255,255,255 80,70,80 center middle 1.5 0.5 -1 0 0 Options
+
+text=0 4 default 16 0,0,0 100,100,100 center bottom 3.5 0.2 -1 0 0 (c)_Natsume'87,_2020.
+# id, x, y, font, size, color, bg_color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y
+
+# tiles
+# trigger_id (for tr_tiles), mirrored, flipped, width, height, number of rows (for tr_tiles) - animations
+# background and logo
+tile=0 0 20 13.3
+-10,-7.65
+ui_title_bg
+
+tile=0 0 10 3
+-5.3,-6
+ui_title_logo
+
+# buttons
+tr_tile=bttn_new_start 0 0 6 0.5 3
+-3.3,-0.4
+default=ui_bttn_title_idle
+mouse_up=ui_bttn_title_idle
+mouse_down=ui_bttn_title_active
+
+tr_tile=bttn_continue 0 0 6 0.5 3
+-3.3,0.6
+default=ui_bttn_title_idle
+mouse_up=ui_bttn_title_idle
+mouse_down=ui_bttn_title_active
+
+tr_tile=bttn_memorial 0 0 6 0.5 3
+-3.3,1.6
+default=ui_bttn_title_idle
+mouse_up=ui_bttn_title_idle
+mouse_down=ui_bttn_title_active
+
+tr_tile=bttn_options 0 0 6 0.5 3
+-3.3,2.6
+default=ui_bttn_title_idle
+mouse_up=ui_bttn_title_idle
+mouse_down=ui_bttn_title_active
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+trigger=bttn_new_start -0.4,-3.3,0.1,2.7 97
+trigger=bttn_continue 0.6,-3.3,1.1,2.7 97
+trigger=bttn_memorial 1.6,-3.3,2.1,2.7 97
+trigger=bttn_options 2.6,-3.3,3.1,2.7 97
+
+# sounds
+sound=bttn_new_start-mouse_down click_high
+sound=bttn_continue-mouse_down click_high
+sound=bttn_memorial-mouse_down click_high
+sound=bttn_options-mouse_down click_high
+sound=bttn_new_start-mouse_up click_on
+sound=bttn_continue-mouse_up click_on
+sound=bttn_memorial-mouse_up click_on
+sound=bttn_options-mouse_up click_on

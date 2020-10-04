@@ -1,0 +1,15 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+pc_test     !   12   class fighter     level 1    exp 0   strength 10     dexterity 10    intelligence 10     hp_max 50      food_max 365     mp_max 100  ap_max 5    bp_max 12   bank_max 30   inventory tester    media pc_test
+
+default     !   12   class default     level 0    exp 0   strength 0     dexterity 0    intelligence 0     hp_max 0      food_max 0     mp_max 0  ap_max 0    bp_max 0   bank_max 0   media pc_fighter
+
+fighter     !   14   class fighter     level 1    exp 0   strength 15     dexterity 6    intelligence 1     hp_max 50      food_max 300     mp_max 10  ap_max 4    bp_max 12   bank_max 30   inventory pc_fighter    media pc_fighter
+ranger      !   14   class ranger      level 1    exp 0   strength 6      dexterity 10   intelligence 5     hp_max 40      food_max 300     mp_max 10  ap_max 5    bp_max 12   bank_max 30   inventory pc_ranger     media pc_ranger
+sorcerer    !   14   class sorcerer    level 1    exp 0   strength 1      dexterity 6    intelligence 15    hp_max 30      food_max 300     mp_max 10  ap_max 4    bp_max 12   bank_max 30   inventory pc_sorcerer   media pc_sorcerer

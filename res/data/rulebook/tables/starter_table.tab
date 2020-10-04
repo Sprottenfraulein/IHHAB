@@ -1,0 +1,14 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+# STARTER TABLE provides list of item names from TREASURE TABLE + amount of the items.
+tester              !   1       wpn_shortsword_base     1
+
+pc_fighter             !   8       wpn_shortsword_base 1   arm_robe_base 1    tls_lockpick 1      foo_apple 2     mgc_rod_dispel 1    spl_spellbook_heal 1    spl_spellbook_dispel 1  ptn_potion_red 1
+pc_ranger              !   8       wpn_pugio_base 1   arm_robe_base 1    tls_lockpick 1      foo_apple 2     mgc_rod_dispel 1    spl_spellbook_heal 1    spl_spellbook_dispel 1  ptn_potion_red 1
+pc_sorcerer            !   8       wpn_quarterstaff_base 1   arm_robe_base 1    tls_lockpick 1      foo_apple 2     mgc_rod_dispel 1    spl_spellbook_heal 1    spl_spellbook_dispel 1  ptn_potion_red 1

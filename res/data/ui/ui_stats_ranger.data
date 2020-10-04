@@ -1,0 +1,185 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0 0 -1 -0.5
+# text
+# id, x, y, font, size, color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y, caption
+
+# inventory item amount for stackables
+text=4.6 1.5 default 14 255,255,255 132,126,135 left top 2 0.5 -1 0 0 Level:
+dyn_text=level 4.6 1.7 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+
+text=4.6 2.1 default 14 255,255,255 132,126,135 left top 2 0.5 -1 0 0 Class:
+dyn_text=class 4.6 2.3 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+
+text=4.6 2.7 default 14 255,255,255 132,126,135 left top 2 0.5 -1 0 0 Exp:
+dyn_text=experience 4.6 2.9 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+
+text=4.6 3.3 default 14 255,255,255 132,126,135 left top 2 0.5 -1 0 0 Free_points:
+dyn_text=stat_points 4.6 3.5 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+
+dyn_text=name 2 4 default 22 255,255,255 132,126,135 left top 4 0.5 -1 0 0
+
+text=2.1 4.6 default 20 255,255,255 132,126,135 left top 4 0.5 -1 0 0 Strength:
+dyn_text=strength 6 4.6 default 20 255,255,255 132,126,135 right top 1 0.5 -1 0 0
+
+text=2.1 5.1 default 20 255,255,255 132,126,135 left top 4 0.5 -1 0 0 Dexterity:
+dyn_text=dexterity 6 5.1 default 20 255,255,255 132,126,135 right top 1 0.5 -1 0 0
+
+text=2.1 5.6 default 20 255,255,255 132,126,135 left top 4 0.5 -1 0 0 Intelligence:
+dyn_text=intelligence 6 5.6 default 20 255,255,255 132,126,135 right top 1 0.5 -1 0 0
+
+text=2.1 6.5 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Hit_Pts:
+dyn_text=hp 5 6.5 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 6.7 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Magic_Pts:
+dyn_text=mp 5 6.7 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 6.9 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Action_Pts:
+dyn_text=ap 5 6.9 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 7.1 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Food:
+dyn_text=food 5 7.1 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 7.3 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Total_Dmg:
+dyn_text=total_damage_info 5 7.3 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 7.5 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Find_traps:
+dyn_text=find_traps 5 7.5 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 7.7 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Disarm_traps:
+dyn_text=disarm_traps 5 7.7 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 7.9 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Pick_locks:
+dyn_text=pick_locks 5 7.9 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 8.1 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Find_ore:
+dyn_text=find_ore 5 8.1 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+text=2.1 8.3 default 14 34,32,52 238,195,154 left top 4 0.5 -1 0 0 Crafting:
+dyn_text=crafting 5 8.3 default 14 34,32,52 238,195,154 right top 1 0.5 -1 0 0
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+
+tile=0 0 2.5 0.5
+1.5,1 4,1
+ui_tileset_stone_edge_top
+
+tile=0 0 2.5 0.5
+1.5,9 4,9
+ui_tileset_stone_edge_bottom
+
+tile=0 0 0.5 2.5
+1.5,1.5 1.5,4 1.5,6.5
+ui_tileset_stone_edge_left
+
+tile=0 0 0.5 2.5
+6,1.5 6,4 6,6.5
+ui_tileset_stone_edge_right
+
+tile=0 0 4 5
+2,1.5
+ui_tileset_stone_field_area
+
+tile=0 0 0.5 0.5
+1.5,1
+ui_tileset_stone_corner_lt
+
+tile=0 0 0.5 0.5
+6,1
+ui_tileset_stone_corner_rt
+
+tile=0 0 0.5 0.5
+1.5,9
+ui_tileset_stone_corner_lb
+
+tile=0 0 0.5 0.5
+6,9
+ui_tileset_stone_corner_rb
+
+tile=0 0 2.5 2.5
+2,1.5
+ui_class_portrait_ranger_color
+
+tile=0 0 0.5 0.5
+4.9,4.55 4.9,5.05 4.9,5.55
+ui_tileset_stone_field_left
+
+tile=0 0 0.5 0.5
+5.4,4.55 5.4,5.05 5.4,5.55
+ui_tileset_stone_field_right
+
+tile=0 0 2.5 0.5
+2,6.15 3.5,6.15
+ui_tileset_scroll_edge_top
+
+tile=0 0 0.5 2.5
+1.8,6.35
+ui_tileset_scroll_edge_left
+
+tile=0 0 0.5 2.5
+5.7,6.35
+ui_tileset_scroll_edge_right
+
+tile=0 0 4 2
+2,6.65
+ui_tileset_scroll_area
+
+tile=0 0 2.5 0.5
+2,8.5 3.5,8.5
+ui_tileset_scroll_edge_bottom
+
+tile=0 0 0.5 0.5
+1.8,6.15
+ui_tileset_scroll_corner_lt
+
+tile=0 0 0.5 0.5
+5.7,6.15
+ui_tileset_scroll_corner_rt
+
+tile=0 0 0.5 0.5
+1.8,8.5
+ui_tileset_scroll_corner_lb
+
+tile=0 0 0.5 0.5
+5.7,8.5
+ui_tileset_scroll_corner_rb
+
+
+tr_tile=bttn_str_up 0 0 0.5 0.5 3
+4.4,4.55
+default=ui_bttn_increase_idle
+mouse_up=ui_bttn_increase_idle
+mouse_down=ui_bttn_increase_active
+
+tr_tile=bttn_dex_up 0 0 0.5 0.5 3
+4.4,5.05
+default=ui_bttn_increase_idle
+mouse_up=ui_bttn_increase_idle
+mouse_down=ui_bttn_increase_active
+
+tr_tile=bttn_int_up 0 0 0.5 0.5 3
+4.4,5.55
+default=ui_bttn_increase_idle
+mouse_up=ui_bttn_increase_idle
+mouse_down=ui_bttn_increase_active
+
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+trigger=full_stats 6.15,1.8,9,6.2 97
+trigger=bttn_str_up 4.55,4.4,5.05,4.9 97
+trigger=bttn_dex_up 5.05,4.4,5.55,4.9 97
+trigger=bttn_int_up 5.55,4.4,6.05,4.9 97
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+sound=full_stats-mouse_up click_high
+sound=bttn_str_up-mouse_down click_high
+sound=bttn_dex_up-mouse_down click_high
+sound=bttn_int_up-mouse_down click_high
+sound=bttn_str_up-mouse_up click_on
+sound=bttn_dex_up-mouse_up click_on
+sound=bttn_int_up-mouse_up click_on

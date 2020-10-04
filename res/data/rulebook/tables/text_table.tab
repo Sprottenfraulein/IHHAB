@@ -1,0 +1,61 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names..
+apple_red           !   3   title apple_red_title               description apple_red_desc              pickup apple_red_pickup
+gold                !   3   title gold_title                    description gold_desc                   pickup gold_pickup
+gems                !   3   title gem_title                     description gem_desc                    pickup gem_pickup
+
+lockpick            !   3   title lockpick_title                description lockpick_desc               pickup lockpick_pickup
+tool                !   3   title tool_title                description tool_desc               pickup tool_pickup
+
+shortsword_base     !   3   title wpn_shortsword_base_title     description wpn_shortsword_base_desc    pickup wpn_base_pickup
+pugio_base          !   3   title wpn_pugio_base_title     description wpn_pugio_base_desc    pickup wpn_base_pickup
+quarterstaff_base   !   3   title wpn_quarterstaff_base_title     description wpn_quarterstaff_base_desc    pickup wpn_base_pickup
+wpn_bow_common      !   3   title wpn_bow_common_title     description wpn_bow_common_desc    pickup wpn_base_pickup
+
+arm_robe            !   3   title arm_robe_title     description arm_robe_desc    pickup item_common
+
+amm_arrow_common    !   3   title amm_arrow_common_title        description amm_arrow_common_desc       pickup amm_arrow_common_pickup
+
+# magic items
+mgc_rod_dispel      !   3   title mgc_rod_dispel_title        description spl_dispel_desc       pickup item_common
+
+potion_red          !   3   title potion_red_title        description potion_red_desc       pickup potion_red_pickup
+
+spellbook_heal      !   3   title spellbook_heal_title        description spellbook_heal_desc       pickup spellbook_heal_pickup
+spellbook_dispel    !   3   title spellbook_dispel_title      description spellbook_dispel_desc     pickup spellbook_heal_pickup
+
+chest               !   2   title chest_common_title            pickup chest_common_pickup
+sack                !   1   title sack_common_title
+
+mob_slime_base_blue      !   2   title mob_slime_base_title          description mob_slime_base_description
+mob_slime_base_purple      !   2   title mob_slime_base_title          description mob_slime_base_description
+
+pc_test             !   1   name pc_test_name       dead pc_test_dead
+
+pc_fighter             !   2   name pc_fighter_name       dead pc_fighter_dead      hp_low pc_fighter_hp_low    mp_low pc_fighter_mp_low    food_low pc_fighter_food_low
+pc_ranger              !   2   name pc_ranger_name       dead pc_ranger_dead      hp_low pc_ranger_hp_low    mp_low pc_ranger_mp_low    food_low pc_ranger_food_low
+pc_sorcerer            !   2   name pc_sorcerer_name       dead pc_sorcerer_dead      hp_low pc_sorcerer_hp_low    mp_low pc_sorcerer_mp_low    food_low pc_sorcerer_food_low
+
+door_wood_common    !   4   m_lock magic_lock      unlock_success picklock_success      unlock_fail lockpick_broken      no_lockpick door_locked
+
+# status effects
+st_test             !   2     title st_test_title                 description st_test_description
+pc_hp_low           !   2     title pc_hp_low_title               description pc_hp_low_description
+pc_food_low         !   2     title pc_food_low_title             description pc_food_low_description
+
+#spells
+spl_healing_food    !   3   title spl_healing_food_title       description spl_healing_food_desc     cast spl_healing_food_cast
+spl_heal            !   3   title spl_heal_title       description spl_heal_desc     cast spl_heal_cast
+spl_dispel          !   3   title spl_dispel_title       description spl_dispel_desc     cast spl_dispel_cast
+
+# traps
+trap_base           !   2   title trap_base_title   no_tool trap_no_tool    disarm_success trap_disarm_success      disarm_fail trap_disarm_fail    reveal trap_reveal
+
+# special
+sys_savebook        !   3   title sys_savebook_title      description sys_savebook_desc     pickup sys_savebook_pickup

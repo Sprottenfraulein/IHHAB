@@ -1,0 +1,16 @@
+# test animation for player character standing idle
+
+tileset=slime
+frames_total=8
+rows=2
+cols=4
+width=24
+height=24
+x_margin=96
+x_padding=0
+y_margin=0
+y_padding=0
+rest_time=8
+step=1
+frame_index=0
+transparent=1

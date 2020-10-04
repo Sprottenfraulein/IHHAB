@@ -1,0 +1,9 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+test_chambers       !       11       name Bottomless_test_chambers_of_Belzed      depth 3   mob_base_count 0     trap_base_chance 0   trap_base_diff 1   trapdiff_multiplier 7     one_door_treasuries 1   base_lock 1     doorlock_multiplier 7     architecture test_chambers     doors test_chambers_doors

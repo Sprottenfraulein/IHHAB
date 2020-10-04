@@ -1,0 +1,24 @@
+21-05-20 23:39
+Mors_Gotha,sorcerer,2,1,6,24,25,35,4,300,0,0,24,6,6,0,0,0,24,24,0,0,238,0,12,4,30,0,2
+-
+id:tool;item_class:amm;price:1;amount_cur:1;amount_max:99;media:tool
+id:quarterstuff;level:1;item_class:wpn;price:1;parameter1:dam_bash;value1:10;digits1:points;class:fighter,ranger,sorcerer;condition_max:60;condition_cur:49;collection:base_staffs;media:quarterstaff_base
+-
+-
+id:robe;level:1;item_class:arm;price:1;parameter1:def_cut;value1:2;digits1:points;parameter2:def_bash;value2:1;digits2:points;class:fighter,ranger,sorcerer;condition_max:40;condition_cur:21;collection:base_robes;media:arm_robe
+-
+-
+id:potion;level:1;item_class:ptn;price:10;spell:spl_heal;charges_cur:1;charges_max:1;disposable:1;amount_max:10;amount_cur:1;media:potion_red
+id:gem;item_class:wlt;price:64;amount_max:999;amount_cur:1;media:gems
+id:robe;level:2;item_class:arm;price:1;parameter1:def_cut;value1:1;digits1:points;parameter2:def_bash;value2:1;digits2:points;class:fighter,ranger,sorcerer;condition_max:40;condition_cur:11;collection:base_robes;media:arm_robe
+id:gold;item_class:wlt;price:1;amount_max:9999;amount_cur:1;media:gold
+id:spl_heal;level:1;cost_mp:10;particle_time:60;media:spl_heal;spell_media:3
+anim_set:3;sound_set:1;text_set:3
+icon:icon_spell_heal;cast:hit_mark_pierce;effect:damage_mark_arcane
+cast:soft_spring_rich
+title:Heal;description:Heals_the_wounds_and_restores_Hit_Pts.;cast:Heal!
+id:spl_dispel;level:1;cost_mp:10;particle_time:16;media:spl_dispel;spell_media:3
+anim_set:3;sound_set:1;text_set:3
+icon:icon_spell_dispel;cast:hit_mark_pierce;effect:damage_mark_arcane
+cast:signal
+title:Dispel_Magic;description:Dissolves_magical_force.;cast:Dispel!

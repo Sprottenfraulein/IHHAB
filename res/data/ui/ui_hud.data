@@ -1,0 +1,92 @@
+# UI DATA
+ui_topleft=0,0
+alignment=0 0 1 0 -3
+# text
+# id, x, y, font, size, color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y, caption
+
+# tiles
+# trigger_id (for tr_tiles), mirrored, flipped, width, height, number of rows (for tr_tiles) - animations
+# equipped items
+
+tile=0 0 0.25 2
+0.5,0.5
+ui_pool_empty
+
+tile=0 0 0.25 2
+1,0.5
+ui_pool_empty
+
+tile=0 0 0.25 2
+1.5,0.5
+ui_pool_empty
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+tr_tile=bttn_inventory 0 0 1 1 3
+2,2
+default=bttn_inv_idle
+mouse_up=bttn_inv_idle
+mouse_down=bttn_inv_active
+
+tr_tile=bttn_stats 0 0 1 1 3
+2,0
+default=bttn_stats_idle
+mouse_up=bttn_stats_idle
+mouse_down=bttn_stats_active
+
+tr_tile=bttn_magic 0 0 1 1 3
+2,1
+default=bttn_magic_idle
+mouse_up=bttn_magic_idle
+mouse_down=bttn_magic_active
+
+tr_tile=bttn_pause 0 0 1 1 3
+3,2
+default=bttn_pause_idle
+mouse_up=bttn_pause_idle
+mouse_down=bttn_pause_active
+
+tr_tile=tr_ui_hud_clock 0 0 1 1 1
+3,0
+default=ui_hud_clock
+
+tr_tile=tr_ui_pool_hp 0 0 0.25 2 1
+0.5,0.5
+default=ui_pool_hp
+
+tr_tile=tr_ui_pool_mp 0 0 0.25 2 1
+1,0.5
+default=ui_pool_mp
+
+tr_tile=tr_ui_pool_food 0 0 0.25 2 1
+1.5,0.5
+default=ui_pool_food
+
+tr_tile=tr_ui_hud_frame 0 0 2 3 1
+0,0
+default=ui_hud_frame_fighter
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+trigger=bttn_inventory 2,2,3,3 97
+trigger=bttn_stats 0,2,1,3 97
+trigger=bttn_magic 1,2,2,3 97
+trigger=bttn_pause 2,3,3,4 97
+trigger=tr_ui_hud_frame 0,0,3,2 97
+trigger=tr_ui_pool_hp   0.5,0.5,2.5,0.75 97
+trigger=tr_ui_pool_mp   0.5,1,2.5,1.25 97
+trigger=tr_ui_pool_food 0.5,1.5,2.5,1.75 97
+trigger=tr_ui_hud_clock 0,3,1,4 97
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+sound=bttn_inventory-mouse_down click_high
+sound=bttn_stats-mouse_down click_high
+sound=bttn_magic-mouse_down click_high
+sound=bttn_pause-mouse_down click_off
+sound=tr_ui_hud_clock-mouse_down click_high
+sound=bttn_inventory-mouse_up click_off
+sound=bttn_stats-mouse_up click_off
+sound=bttn_magic-mouse_up click_off
+sound=bttn_pause-mouse_up click_on
+sound=tr_ui_hud_clock-mouse_up tripleclack

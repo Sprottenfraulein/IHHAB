@@ -1,0 +1,14 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+basement01      >   1   100            mob_slime_base_melee
+basement02      >   2   100     50     mob_slime_base_melee    mob_slime_base_ranged
+
+
+mob_slime_base_melee      !    14   level 1   strength 5    dexterity 5     intelligence 1      hp_max 15    mp_max 0    ap_max 1   bp_max 10   bank_max 0     aggr_distance 10   live_distance 15   exp 10  drop set_slime_base_melee   attack att_slime_base_touch  media mob_slime_base_blue
+mob_slime_base_ranged     !    14   level 1   strength 5    dexterity 10     intelligence 1      hp_max 10    mp_max 0    ap_max 2   bp_max 10   bank_max 0     aggr_distance 10   live_distance 15   exp 10  drop set_slime_base_ranged   attack att_slime_base_shoot  media mob_slime_base_purple

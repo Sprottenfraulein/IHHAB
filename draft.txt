@@ -1,0 +1,529 @@
+DESIGN DOCUMENT, v1.0
+
+PROCEDURAL TOWNS
+	Town names
+	Procedural maps
+	Few different town tilesets
+PROCEDURAL LEVELS
+	Levels are composed from 4x4 spaces map-tile presets
+	Generator picks from 1 to 5 monster types (bell curve on 3) for generated level
+	Generator chooses level type:
+		Mine:
+			Ore objects
+		Dungeon:
+			Loot objects
+		
+PROCEDURAL ENCOUNTERS
+	Encounters level scaling PREFIXES:
+		common			base level 
+		greater			+5-10 lvls
+		vile			+11-15 lvls
+		fierce			+16-20 lvls
+		dire			+21-25 lvls
+		sinister		+26-30 lvls
+		killer			+31-35 lvls
+		terror			+36-40 lvls
+		underworld		+41-50 lvls
+		prehistoric		+51-60 lvls
+		hellish			+61-99+ lvls
+PROCEDURAL TREASURE
+	OBJECTS
+		Properties
+			All
+				  name 					- in-game title
+				  description 			- in-game description
+				  icon 					- gameboard representation
+				  image 				- larger picture
+				  collection 			- id of collection
+				  condition 			- on 0 object desintegrates
+			Weapon 		Wpn_1234,P_123,P_123,S_123;
+				  dmg 					- wound dealt with one hit
+				  type 					- bash, pierce or slice for melee
+				  ranged 				- flag for bows, slings,etc.
+				  ammo 					- ammo used (can be none)
+				  class 				- what classes can use
+			Ammo 		Amm_1234,P_123,S_123;
+				  dmg 					- added to weapon dmg
+				  type 					- bash pierce or slice for ranged
+				  amount 				- amount in one stack
+			Magical		Mag_1234,P_1234,S_1234;
+				  class 				- what classes can use
+				  spell 				- spell that casts on use
+				  charges 				- amount of charges
+				  disposable			- flag to disappear after all charges used
+			Armor 		Arm_1234,P_1234,S_1234;
+				  defence 				- defence bonus
+				  type 					- bash, pierce or slice protection
+				  class 				- what classes can use
+			Shield 		Shl_1234,P_1234,S_1234;
+				  defence 				- defence bonus
+				  type 					- bash, piece or slice protection
+				  class 				- what classes can use
+			Accessory 	Acc_1234,P_1234,S_1234;
+				  defence 				- defence bonus
+				  type 					- bash, piece or slice protection
+				  class 				- what classes can use
+			Potion 		Pot_1234,P_1234,S_1234;
+				  spell 				- spell that effects on target
+				  charges 				- number of uses
+				  disposable			- flag to disappear after all charges spent
+			Key 		Key_1234
+				  lock id 				- id of a locked container or door
+			Tool 		Tol_1234,P_1234,S_1234
+				  grade 				- hacking bonus
+				  class 				- what classes can use
+			Text
+				  language 				- what language (s) needed to access text
+				  text 					- in-game text
+			Resource
+				  type 					- gold, gem, ore, material, etc.
+				  amount 				- amount in one stack
+			Blueprint
+				  product 				- object that generates in result
+				  recipe 				- id of list of resources needed
+				  rate 					- success probability
+	Weapons & Equipment
+		Types:
+			Common			lvl1+		- Base stats, no affixes
+			Enchanted		lvl10+		- Base stats + 1 affix (prefix or suffix)
+			Rare			lvl30+		- Base stats + 2 affixes (prefix + suffix, or 2 prefixes)
+			Legendary		lvl40+		- Base stats + 3 affixes (2 prefix + suffix, or 3 prefixes)
+			Unique			unique		- Unique stats
+		Weapons
+			Pugio			FRS		cut			91-110% DEXTERITY 
+			Seax			FRS		cut			111-130% DEXTERITY
+			Baselard		FRS		cut			131-150% DEXTERITY
+			Acinaces		FR		cut			151-170% DEXTERITY
+			Misericorde		FRS		pierce		171-190% DEXTERITY
+			Stiletto		FRS		pierce		191-200% DEXTERITY
+			
+			Shortsword		F		cut			86-115% STRENGTH
+			Gladius			F		cut			106-125% STRENGTH
+			Harpe			F		cut			116-135% STRENGTH
+			Xiphos			F		cut			126-145% STRENGTH
+			Falcata			F		cut			136-155% STRENGTH
+			Estoc			F		pierce		146-165% STRENGTH
+			Longsword		F		cut			156-175% STRENGTH
+			Broadsword		F		cut			166-185% STRENGTH
+			Spatha			F		cut			176-195% STRENGTH
+			Paramerion		F		cut			186-200% STRENGTH
+			Falchion		F		cut			191-205% STRENGTH
+			
+			Cleaver			F		cut			101-110% STRENGTH
+			Hatchet			F		cut			116-125% STRENGTH
+			War axe			F		cut			131-140% STRENGTH
+			Battle axe		F		cut			151-160% STRENGTH
+			Gothic axe		F		cut			171-180% STRENGTH
+			Great axe		F		cut			191-195% STRENGTH
+			
+			Club			FRS		blunt		106-110% STRENGTH
+			Cudgel			FRS		blunt		116-120% STRENGTH
+			Mace			F		blunt		126-130% STRENGTH
+			Morning star	F		blunt		136-140% STRENGTH
+			Flail			F		blunt		146-150% STRENGTH
+			Battle pick		F		blunt		156-160% STRENGTH
+			War hammer		F		blunt		166-170% STRENGTH
+			Great hammer	F		blunt		176-180% STRENGTH
+			
+			Quarterstaff	FS		blunt		67-133%	STRENGTH
+			Battlestaff		FS		blunt		101-166% STRENGTH
+			Great staff		FS		blunt		167-200% STRENGTH
+			
+			Sling			FRS		pierce		101-125% DEXTERITY
+			Short bow		FR		pierce		121-145% DEXTERITY
+			Long bow		FR		pierce		141-165% DEXTERITY
+			Recurve bow		FR		pierce		161-185% DEXTERITY
+			Precision bow	FR		pierce		181-205% DEXTERITY
+			Compound bow	FR		pierce		191-215% DEXTERITY
+			Crossbow		FR		pierce		201-220% DEXTERITY
+			
+		Armor
+			Cloth cap		FRS		+11-20% HP
+			Wizard hat		  S		+16-25% HP
+			Leather helm	FR		+21-30% HP
+			Chain coif		F		+31-40% HP
+			Plate helm		F		+41-50% HP
+			Vacuum helm		F		+51-55% HP +5% omni
+			Blast helm		F		+56-60% HP
+			
+			
+			Robe			FRS		+21-30% HP
+			Cloak			FRS		+31-40% HP
+			Coat			FRS		+41-50% HP
+			Quilted armor	FR		+41-60% HP
+			Leather vest	FR		+51-70% HP
+			Chain Mail		F		+61-80% HP
+			Scale Mail		F		+71-90% HP
+			Breast Plate	F		+81-100% HP
+			Full Plate		F		+91-110% HP
+			Vacuum suit		F		+96-115% HP	+10% omni			
+			Blast suit		F		+100-120% HP
+			
+			
+			Buckler			FR		+16-30% HP
+			Wooden shield	F		+31-45% HP
+			Kite shield		F		+46-60% HP
+			Tower shield	F		+61-75% HP
+			BallisticShild	F		+71-90% HP	
+	PREFIXES
+		W Am M Ar H S Ac P T
+		Condition w m ar h s ac t
+		  fragile =1					lvl30+
+		  delicate -25-75%				lvl10+
+		  tempered +25-75%				lvl20+
+		  forged +76-125%				lvl40+
+		  ancient +100-1000%			lvl60+
+		  eternal indefinite			unique
+		Damage w am 
+		  awry -6-10%					lvl30+
+		  dull -1-5%					lvl10+
+		  balanced +1-5%				lvl10+
+		  crafted +6-10%				lvl15+
+		  masterful +11-15%				lvl20+
+		  fearful +16-20%				lvl25+
+		  wicked +21-25%				lvl30+
+		  dangerous +26-30%				lvl35+
+		  deadly +31-35%				lvl40+
+		  demonic +36-45%				lvl50+
+		  infernal +46-50%				lvl60+
+		  black +51-100%				unique
+		Type w am
+		  spiked +pierce					lvl10+
+		  enbladed +slice					lvl10+
+		  weightened +bash					lvl10+
+		  bizarre +pierce+slice+bash		unique
+		Ammo w
+		  infinite use no ammo				unique
+		Class W Am M Ar H S Ac T
+		  gabriel's +warrior				lvl40+
+		  kage's +rogue						lvl40+
+		  belzed's +mage					lvl40+
+		  universal +warrior, rogue,mage	unique
+		Spell
+		  of *name of spell* 
+		Charges m
+		  demo =1							lvl40+
+		  discipular -25-75%				lvl10+
+		  energized +25-75%					lvl10+
+		  luminous +76-125%					lvl40+
+		  fusion +126-1000%					lvl60+
+		  channeling infinite				unique
+		Defence ar h s ac
+		  deadman's -31-40%					lvl30+
+		  poor's -15-30%					lvl10+
+		  militia's +15-25%					lvl10+
+		  knight's +26-35%					lvl25+
+		  baron's +36-45%					lvl40+
+		  king's +46-50%					lvl60+
+		  avatar's +51-100%					unique
+		Grade T
+		  improvised -16-30%				lvl30+
+		  cheap -1-15%						lvl10+
+		  advanced +10-20%					lvl10+
+		  professional +21-30%				lvl25+
+		  cunning +31-40%					lvl40+
+		  forbidden +41-50%					lvl60+
+		  quantum +51-100%					unique
+		Poison w am 
+		  poison +1-15%						lvl20+
+		Poison At H S Ac
+		  emerald +6-20%					lvl10+
+		Fire w am
+		  fire +1-15%						lvl20+
+		Fire at h s ac
+		  ruby +6-20%						lvl10+
+		Ice w am
+		  ice +1-15%						lvl20+
+		Ice at h s ac
+		  diamond +6-20%					lvl10+
+		Lightning w am
+		  shock +1-15%						lvl20+
+		Lightning at h s ac
+		  sapphire +6-20%					lvl10+
+		Arcane w am
+		  arcane +1-15%						lvl20+
+		Arcane at h s ac
+		  amethyst +6-20%					lvl10+
+		Omni at h s ac
+		  Obsidian +1-10%					lvl40+
+	SUFFIXES
+		W Am M Ar H S Ac P T
+		STRENGTH W Am M Ar H S Ac
+		  of debility -6-10				lvl30+
+		  of weakness -1-5				lvl10+
+		  of empowerment +6-10			lvl10+
+		  of valor +11-15				lvl20+
+		  of conquer +16-20				lvl30+
+		  of triumph +21-25				lvl45+
+		  of ascendance +26-30%			lvl60+
+		DEXTERITY W Am M Ar H S Ac
+		  of vertigo -6-10%				same as strength
+		  of clumsiness -1-5%
+		  of reflexes +6-10%
+		  of agility +10-15%
+		  of fineness +16-20%
+		  of immersion +21-25%
+		  of shadows +26-30%
+		INTELLIGENCE W Am M Ar H S Ac
+		  of madness -6-10%				same as strength
+		  of jokes -1-6%
+		  of curiosity +6-10%
+		  of insight +11-15%
+		  of knowledge +16-20%
+		  of mystics +21-25%
+		  of cosmologists +26-30%
+		Mana W Am M Ar H S Ac
+		  of the black hole -6-10%		same as strength
+		  of void -1-5%
+		  of ether +6-10%
+		  of the moon +11-15%
+		  of the sun +16-20%
+		  of zodiac +21-25%
+		  of transcendence +26-30%
+		Hp W Am M Ar H S Ac
+		  of the dead -11-15%			same as strength
+		  of anemia -6-10%
+		  of vitality +6-10%
+		  of mercy +11-15%
+		  of love +16-20%
+		  of angels +21-25%
+		  of gods +26-30%
+		Find Wealth
+			of poverty	-6-10% gold
+			of modesty	-1-5% gold
+			of thrift	+1-5% gold
+			of greed	+6-10% gold
+			of wealth	+11-15% gold
+			of Midas	+16-20% gold
+		Find Food
+			of starving		-6-10% food
+			of waste		-1-5% food
+			of survival		+1-5% food
+			of satiety		+6-10% food
+			of plenty		+11-15% food
+			of Ghom			+16-20% food
+		Find Ammo
+		Find Resource
+		Find Loot
+	Resources (ores):
+		Magnetite 		lvl20+			(base resource for steel)
+		Copper 			lvl10+			(base resource for brass and bronze)
+		
+		Sphalerite 		lvl20+			(for zinc-copper brass)
+		Cassiterite 	lvl30+			(for copper-tin bronze) -wider damage range than brass but lower durability than steel
+		Beryl 			lvl40+			(for copper-berillium bronze)	
+		Meteorite 		lvl30+			(for iron-nickel steel) - lower damage than bronze but better durability
+		Graphite 		lvl40+			(for iron-carbon steel) - best durability best damage	
+	Recipes for resources:
+		Copper x10 + coins x100 = Copper equipment
+		Copper x6 + sphalerite x4 + coins x100 = Brass equipment
+		Copper x9 + cassiterite x1 + coins x100 = Bronze equipment
+		Copper x10 + beryl x5 + coins x200 = Berylium equipment
+		Magnetite x10 + coins x200 = Iron equipment
+		Meteorite x10 + coins x200 = Meteorite equipment
+		Magnetite x10 + Graphite x10 + coins x300 = Carbon equipment
+PROCEDURAL QUESTS
+MAP TILESETS
+SPRITE TILESETS
+	Levels (including Towns, Dungeons):
+		Every set includes:
+			Floors
+			Destructible floors
+			Walls
+			Destructible walls
+			Fences
+			Destructible fences
+			Strong doors
+			Strong doorways
+			Doors
+			Doorways
+			Upstairs
+			Downstairs
+			Indestructible dungeon interiors
+			Destructible containers
+			Containers
+			Empty containers
+			Lightsources
+			Lit Lightsources
+			Restplace
+			Old restplace
+			Signatures
+			Mining containers
+			Paths
+		Sets:	
+			Forest
+			Mountains
+			Desert
+			Volcano
+			Sea
+			Moon
+			Underground vault
+			Basement
+			Caves
+			Catacombs
+			Crypts
+			Castle
+			Vault
+	UI (minimum 1):
+		Every set includes:
+			Frames vertical
+			Frames horizontal
+			Frame corner left-top
+			Frame corner right-top
+			Frame corner left-bottom
+			Frame corner right-bottom
+			Checkbox empty
+			Checkbox checked
+			Checkbox disabled
+			Button
+			Button pressed
+			Button disabled
+		Sets:
+			Classic fantasy
+	Items (minimum 1):
+		Every set includes:
+			For every non-suffix item:
+				In-game icon
+				Larger image
+			For every suffixable item:
+				In-game icon
+				Larger image
+				In-game icon rare
+				Larger image rare
+				In-game icon epic
+				Larger image epic
+		Sets:	
+			Classic fantasy + Planetary Romance
+	Spells:
+		Every set includes:
+			For every spell:
+				In-game effect or animation
+				Spellbook icon
+		Sets:
+			Classic fantasy + Planetary Romance
+	PC (minimum 1):
+		Every set includes:
+			Idle ingame figures or animation (for every few character levels)
+			Attack ingame figures or animation (for every few character levels)
+			Spellcast ingame figures or animation (for every few character levels)
+			Wounded ingame figures or animation (for every few character levels)
+			Rest ingame figures or animation
+			Dead ingame figures or animation
+			Ragdoll inventory portrait 
+		Sets:
+			Fighter
+			Ranger
+			Sorcerer		
+	Encounters (including NPC, monsters):
+		Every set includes:
+			Idle ingame figures or animation (for every few character levels)
+			Attack ingame figures or animation (for every few character levels)
+			Spellcast ingame figures or animation (for every few character levels)
+			Wounded ingame figures or animation (for every few character levels)
+			Rest ingame figures or animation
+			Dead ingame figures or animation
+		Sets:
+			Classic fantasy + Planetary Romance
+CHARACTER STATS
+MAGIC SPELLS
+	MAGIC
+		fire shot 				100% INTELLIGENCE as FIRE directional damage to nearest enemy			one-time
+		poison shot				100% INTELLIGENCE as POISON directional damage to nearest enemy		one-time
+		ice shot 				100% INTELLIGENCE as ICE directional damage to nearest enemy			one-time
+		lightning shot			100% INTELLIGENCE as LIGHTNING directional damage to nearest enemy		one-time
+		arcane shot				100% INTELLIGENCE as ARCANE directional damage to nearest enemy		one-time
+		Fireball				100% INTELLIGENCE as FIRE damage to all in 3x3 spaces, select center	one-time
+		Poison cloud			20% INTELLIGENCE as POISON damage to all in 3x3 spaces, select center	5 turns
+		Freeze 					10% INTELLIGENCE as ICE damage to all in a room						10 turns
+		Thunderchain			Damage enemies from nearest to 4th farthest (40%-30%-20%-10%) LIGHTNING one-time
+		Arcane blast 			50% INTELLIGENCE as ARCANE damage to all in 3x3 spaces, select center 	2 turns
+		Flamewave				Decreasing by 10% with every space FIRE directional cone damage one-time
+		Poison wave				Decreasing by 10% with every space POISON directional cone damage one-time
+		Cold wave				Decreasing by 10% with every space ICE directional cone damage one-time
+		Shockwave				Decreasing by 10% with every space LIGHTNING directional cone damage one-time
+		Magic wave				Decreasing by 10% with every space ARCANE directional cone damage one-time
+		Poison shield			Gives HP pool based on 1000% INTELLIGENCE for poison damages			pool
+		Fire shield				Gives HP pool based on 1000% INTELLIGENCE for fire damages			pool
+		Lightning shield		Gives HP pool based on 1000% INTELLIGENCE for lightning damages		pool
+		Frozen shield			Gives HP pool based on 1000% INTELLIGENCE for ice damages				pool
+		Arcane shield			Gives HP pool based on 1000% INTELLIGENCE for arcane damages			pool
+		Poison thorns			
+		Magma thorns s p
+		Shock thorns s p
+		Ice thorns s p
+		Magic thorns s p
+		Poisoned weapon			+10% poison damage to equipped weapon				permanent
+		Fire weapon				+10% fire damage to equipped weapon					permanent
+		Thunder weapon			+10% lightning damage to equipped weapon			permanent
+		Frozen weapon			+10% ice damage to equipped weapon					permanent
+		Arcane weapon			+10% arcane damage to equipped weapon				permanent
+		Heal 	 				restore 100% INTELLIGENCE of HP to caster			one-time
+		Healing wind			restore 20% INTELLIGENCE of HP to caster			10 turns
+		Charm					Target attacks nearest enemy						10 turns	
+		Mass charm				All enemies attack nearest enemies					3 turns
+		Stun					Target won't move									5 turns
+		Mass stun 				All enemies won't move								2 turns
+		Sleep s r			
+		Mass sleep s r
+		Identify				Reveal item properties								one-time 
+		Mass identify			Reveal all items properties							one-time
+		Poison beast			Summon familiar monster with 50% INTELLIGENCE poison damage and 500% intelligence HP one-time
+		Fire beast				Summon familiar monster with 50% INTELLIGENCE fire damage and 500% intelligence HP one-time
+		Thunder beast			Summon familiar monster with 50% INTELLIGENCE lightning damage and 500% intelligence HP one-time
+		Ice beast				Summon familiar monster with 50% INTELLIGENCE ice damage and 500% intelligence HP one-time
+		Arcane beast			Summon familiar monster with 50% INTELLIGENCE arcane damage and 500% intelligence HP one-time
+		warp 					directional teleportation on 10 spaces			one-time
+		dispell					remove any spell or magical lock 				one-time
+		invisibility			invisibility for monsters						10 turns	
+		levitation				walk through water and pits						10 turns
+		Unlock					opens any lock 									one-time
+		Telekinesis				get an item in field of vision					one-time
+STATUSES:
+		
+SAVE PROGRESS
+
+
+Game scheme:
+
+												[Main Menu]
+					    +---------------------------+------------------------------+
+			   		[New Game]					[Load Game]						  
+					   	|							|	
+				[Character creation]		[Character selection]
+					 	+-----------+---------------+
+	+-------------------------->[Safe Town]<---------------------------------+
+	|					(rest, stash, shop, craft, study)					 |
+	|			+-------------------+-------------------+					 |
+	|		 [Dungeon]	  		[Travel back]      [Travel forth]			 |
+	|		(endless maze		Difficulty and		Difficulty and			 |
+	|		divided by 			rewards decrease	rewards increase		 |
+	|		levels)					+-------------------+--------------------+
+	+-----------+
+	
+	
+	
+	
+	
+	
+	
+	structure:
+	
+	Res
+		Images
+			Tilesets
+				pc
+					*.bmp
+		Data
+			Anims
+				Animations.data (<animation name> = <path/filename>)
+				Sets
+					pc
+						<pc class name>
+							*.data (<animation index> = <animation name from Animations.data>)
+				*.ani (Tileset name, number of frames, speed, loops, etc.)
+			Images
+				Tilesets
+					Tilesets.data (<Tileset name> = <path/filename>)
+
+				
+		

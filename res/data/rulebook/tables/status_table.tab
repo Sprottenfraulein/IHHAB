@@ -1,0 +1,14 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+# affixes parameters:
+# min_level, affix_class(through comma: wpn,amm,mgc,arm,hlm,shl,acc,ptn,tls), type (prefix or suffix), parameter (to modify), modifier,
+# digits (percent, points or force), name (in-game)
+st_test         !   6    name Test   parameter1 hp_max    value1 10000  digits1 percent  base_value 10      time 10     media st_test
+pc_hp_low       !   4    name Hp_low   base_value 10      time -1     media pc_hp_low
+pc_food_low     !   4    name Food_low   base_value 10      time -1     media pc_food_low

@@ -1,0 +1,26 @@
+# all dungeon objects description. In description all spaces should be replaced by underscore. Format:
+# <tile name>=<animation name> <put_ingame_description_here>
+1=You see a wall.
+2=You see a fence.
+3=You see a doorway.
+4=You see a doorway.
+5=You see an interior.
+6=You see a road.
+7=You see a floor.
+F=You see a damaged floor.
+W=You see a damaged wall.
+f=You see a damaged fence.
+D=You see a strong door.
+d=You see a door.
+S=You see a portal.
+X=You see a portal.
+c=You see a conservation.
+C=You see a chest.
+E=The chest is empty!
+i=Somebody extinguished the light.
+I=The light is lit.
+R=You can rest here!
+r=Someone stayed here earlier.
+T=You see a writing.
+M=This ore chunk is untouched.
+!=It's a trap!

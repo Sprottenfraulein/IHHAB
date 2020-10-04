@@ -1,0 +1,21 @@
+# UI DATA
+# text
+# x, y, font, size, color, h_align, v_align, timer, mov_x, mov_y, caption
+text=864 432 default 24 255,255,255 center middle -1 0 0 A_button.
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of positions, number of rows - animations
+tile=button 0 0 128 64 3
+800,400
+default=button_common_default
+mouse_up=button_common_default
+mouse_down=button_common_pressed
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+trigger=button 400,800,463,927 97
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+sound=gold_pickup 1
+button=mouse_down

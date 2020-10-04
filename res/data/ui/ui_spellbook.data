@@ -1,0 +1,235 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0 0 -1 -0.5
+# text
+# id, x, y, font, size, color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y, caption
+
+# inventory item amount for stackables
+dyn_text=select 3.6 1.85 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-0 2.1 3.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-1 3.1 3.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-2 4.1 3.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-3 5.1 3.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-4 2.1 4.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-5 3.1 4.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-6 4.1 4.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-7 5.1 4.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-8 2.1 5.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-9 3.1 5.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-10 4.1 5.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-11 5.1 5.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-12 2.1 6.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-13 3.1 6.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-14 4.1 6.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-15 5.1 6.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-16 2.1 7.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-17 3.1 7.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-18 4.1 7.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-19 5.1 7.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-20 2.1 8.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-21 3.1 8.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-22 4.1 8.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+dyn_text=spell-23 5.1 8.1 default 20 255,255,255 132,126,135 left top 2 0.5 -1 0 0
+
+
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+
+tile=0 0 2.5 0.5
+1.5,1 4,1
+ui_tileset_stone_edge_top
+
+tile=0 0 2.5 0.5
+1.5,9 4,9
+ui_tileset_stone_edge_bottom
+
+tile=0 0 0.5 2.5
+1.5,1.5 1.5,4 1.5,6.5
+ui_tileset_stone_edge_left
+
+tile=0 0 0.5 2.5
+6,1.5 6,4 6,6.5
+ui_tileset_stone_edge_right
+
+tile=0 0 4 7.5
+2,1.5
+ui_tileset_stone_field_area
+
+tile=0 0 0.5 0.5
+1.5,1
+ui_tileset_stone_corner_lt
+
+tile=0 0 0.5 0.5
+6,1
+ui_tileset_stone_corner_rt
+
+tile=0 0 0.5 0.5
+1.5,9
+ui_tileset_stone_corner_lb
+
+tile=0 0 0.5 0.5
+6,9
+ui_tileset_stone_corner_rb
+
+# CHOSEN SPELL
+tr_tile=select 0 0 1 1 1
+3.5,1.75
+default=ui_empty
+
+#SPELLS
+tr_tile=spell-0 0 0 1 1 1
+2,3
+default=ui_empty
+
+tr_tile=spell-1 0 0 1 1 1
+3,3
+default=ui_empty
+
+tr_tile=spell-2 0 0 1 1 1
+4,3
+default=ui_empty
+
+tr_tile=spell-3 0 0 1 1 1
+5,3
+default=ui_empty
+
+tr_tile=spell-4 0 0 1 1 1
+2,4
+default=ui_empty
+
+tr_tile=spell-5 0 0 1 1 1
+3,4
+default=ui_empty
+
+tr_tile=spell-6 0 0 1 1 1
+4,4
+default=ui_empty
+
+tr_tile=spell-7 0 0 1 1 1
+5,4
+default=ui_empty
+
+tr_tile=spell-8 0 0 1 1 1
+2,5
+default=ui_empty
+
+tr_tile=spell-9 0 0 1 1 1
+3,5
+default=ui_empty
+
+tr_tile=spell-10 0 0 1 1 1
+4,5
+default=ui_empty
+
+tr_tile=spell-11 0 0 1 1 1
+5,5
+default=ui_empty
+
+tr_tile=spell-12 0 0 1 1 1
+2,6
+default=ui_empty
+
+tr_tile=spell-13 0 0 1 1 1
+3,6
+default=ui_empty
+
+tr_tile=spell-14 0 0 1 1 1
+4,6
+default=ui_empty
+
+tr_tile=spell-15 0 0 1 1 1
+5,6
+default=ui_empty
+
+tr_tile=spell-16 0 0 1 1 1
+2,7
+default=ui_empty
+
+tr_tile=spell-17 0 0 1 1 1
+3,7
+default=ui_empty
+
+tr_tile=spell-18 0 0 1 1 1
+4,7
+default=ui_empty
+
+tr_tile=spell-19 0 0 1 1 1
+5,7
+default=ui_empty
+
+tr_tile=spell-20 0 0 1 1 1
+2,8
+default=ui_empty
+
+tr_tile=spell-21 0 0 1 1 1
+3,8
+default=ui_empty
+
+tr_tile=spell-22 0 0 1 1 1
+4,8
+default=ui_empty
+
+tr_tile=spell-23 0 0 1 1 1
+5,8
+default=ui_empty
+
+default=ui_empty
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+trigger=select 1.75,3.5,2.75,4.5 97
+trigger=spell-0 3,2,4,3 97
+trigger=spell-1 3,3,4,4 97
+trigger=spell-2 3,4,4,5 97
+trigger=spell-3 3,5,4,6 97
+trigger=spell-4 4,2,5,3 97
+trigger=spell-5 4,3,5,4 97
+trigger=spell-6 4,4,5,5 97
+trigger=spell-7 4,5,5,6 97
+trigger=spell-8 5,2,6,3 97
+trigger=spell-9 5,3,6,4 97
+trigger=spell-10 5,4,6,5 97
+trigger=spell-11 5,5,6,6 97
+trigger=spell-12 6,2,7,3 97
+trigger=spell-13 6,3,7,4 97
+trigger=spell-14 6,4,7,5 97
+trigger=spell-15 6,5,7,6 97
+trigger=spell-16 7,2,8,3 97
+trigger=spell-17 7,3,8,4 97
+trigger=spell-18 7,4,8,5 97
+trigger=spell-19 75,5,8,6 97
+trigger=spell-20 8,2,9,3 97
+trigger=spell-21 8,3,9,4 97
+trigger=spell-22 8,4,9,5 97
+trigger=spell-23 8,5,9,6 97
+
+
+# sounds
+# sound_name, number of trigger rows (states through comma)
+sound=select-mouse_up click_off
+sound=spell-0-mouse_up click_on
+sound=spell-1-mouse_up click_on
+sound=spell-2-mouse_up click_on
+sound=spell-3-mouse_up click_on
+sound=spell-4-mouse_up click_on
+sound=spell-5-mouse_up click_on
+sound=spell-6-mouse_up click_on
+sound=spell-7-mouse_up click_on
+sound=spell-8-mouse_up click_on
+sound=spell-9-mouse_up click_on
+sound=spell-10-mouse_up click_on
+sound=spell-11-mouse_up click_on
+sound=spell-12-mouse_up click_on
+sound=spell-13-mouse_up click_on
+sound=spell-14-mouse_up click_on
+sound=spell-15-mouse_up click_on
+sound=spell-16-mouse_up click_on
+sound=spell-17-mouse_up click_on
+sound=spell-18-mouse_up click_on
+sound=spell-19-mouse_up click_on
+sound=spell-20-mouse_up click_on
+sound=spell-21-mouse_up click_on
+sound=spell-22-mouse_up click_on
+sound=spell-23-mouse_up click_on

@@ -1,0 +1,21 @@
+# UI DATA
+ui_topleft=0,0
+# alignment= mouse follow flag, stick horizontally (-1 off, 0 left, 1 right), stick vertically (-1 off, 0 top, 1 bottom),
+# offset_x (from horizontal stick point), offset_y (from vertical stick point)
+alignment=0 0 0 0 0
+# text
+# id, x, y, font, size, color, h_align, v_align, max_width, max_height, timer, mov_x, mov_y
+dyn_text=dung_title 0.1 0.1 default 14 255,255,255 0,0,0 left top 6 2 -1 0 0
+
+# tiles
+# trigger_id (for tr_tiles), mirrored, flipped, width, height, number of rows (for tr_tiles) - animations
+# equipped items
+
+# tiles
+# trigger_id, mirrored, flipped, width, height, number of rows - animations
+
+# triggers
+# trigger_id, top, left, bottom, right, key_code
+
+# sounds
+

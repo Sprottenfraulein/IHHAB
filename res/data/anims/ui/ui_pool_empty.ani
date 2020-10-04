@@ -1,0 +1,16 @@
+# test animation for player character standing idle
+
+tileset=ui_hud_pools
+frames_total=1
+rows=1
+cols=1
+width=6
+height=4
+x_margin=0
+x_padding=1
+y_margin=147
+y_padding=0
+rest_time=-1
+step=0
+frame_index=0
+transparent=0

@@ -1,0 +1,68 @@
+# Table for randomizing.
+# First value: row name
+# Second value: ! for actual value row, > for random picker row
+# Next values are different for ! and >:
+# !: Third value is integer number of actual values for the entry, after that follow pairs of name and value by number
+# set before
+# >: Third value is integer number of random variants to pick from, after that follow probabilities for every variant
+# and after that go actual variants that are row names.
+apple_red           !   2   tile foo_apple_red  flash foo_apple_red_flash
+
+gold                !   2   tile in_test_gold   flash in_test_gold_flash
+gems                !   2   tile in_test_gem    flash in_test_gem_flash
+
+lockpick            !   2   tile tls_lockpick   flash tls_lockpick_flash
+tool                !   2   tile tls_tool       flash tls_tool_flash
+
+shortsword_base     !   1   tile wpn_shortsword_base
+pugio_base          !   1   tile wpn_pugio_base
+quarterstaff_base   !   1   tile wpn_quarterstaff_base
+wpn_bow_common      !   1   tile wpn_shortbow_base
+amm_arrow_common    !   1   tile amm_arrow_base
+
+arm_robe            !   1   tile arm_robe_base
+
+# magic items
+mgc_rod_dispel      !   1   tile mgc_rod_base
+
+# potions
+potion_red          !   2   tile potion_red   flash potion_red_flash
+
+chest               !   2   tile chest_common_full      empty chest_common_empty    flash chest_common_flash
+sack                !   1   tile sack_common_full       flash sack_common_full_flash
+
+spellbook_heal      !   2   tile itm_book_gray       flash itm_book_gray_flash
+spellbook_dispel    !   2   tile itm_book_gray       flash itm_book_gray_flash
+
+pc_test             !   5   walk_north ant_armored_walk_north   walk_south ant_armored_walk_south   walk_east ant_armored_walk_east     walk_west ant_armored_walk_west     dead pc_test_dead
+
+# PC ANIMATIONS
+pc_fighter             !   5   walk_north ant_armored_walk_north   walk_south ant_armored_walk_south   walk_east ant_armored_walk_east     walk_west ant_armored_walk_west     dead pc_test_dead
+pc_ranger              !   5   walk_north ant_armored_walk_north   walk_south ant_armored_walk_south   walk_east ant_armored_walk_east     walk_west ant_armored_walk_west     dead pc_test_dead
+pc_sorcerer            !   5   walk_north ant_armored_walk_north   walk_south ant_armored_walk_south   walk_east ant_armored_walk_east     walk_west ant_armored_walk_west     dead pc_test_dead
+
+# MOBS ANIMATIONS
+mob_slime_base_blue      !   5   idle mob_slime_base_idle    walk mob_slime_base_walk    attack mob_slime_base_attack      wound mob_slime_base_wound    missile mob_slime_missile
+mob_slime_base_purple    !   5   idle mob_slime_purple_idle    walk mob_slime_purple_walk    attack mob_slime_purple_attack      wound mob_slime_purple_wound    missile mob_slime_missile
+
+door_wood_common_hor    !   4   opened in_door_common_opened_hor    closed in_door_common_closed_hor     locked in_door_common_locked_hor     m_lock in_door_common_magic_hor
+door_wood_common_ver    !   4   opened in_door_common_opened_ver    closed in_door_common_closed_ver     locked in_door_common_locked_ver     m_lock in_door_common_magic_ver
+doorway_wood_common !   1   opened in_test_doorway
+
+stairs_common       !   2   upstairs stairs_common_up   downstairs stairs_common_down
+
+# status effects
+st_test             !   1   icon in_test_gem
+pc_hp_low           !   1   icon icon_pc_hp_low
+pc_food_low         !   1   icon foo_apple_red
+
+# spell icons
+spl_healing_food    !   2   icon damage_mark_blood      cast hit_mark_pierce            effect hit_mark_slice
+spl_heal            !   2   icon icon_spell_heal        cast hit_mark_pierce            effect damage_mark_arcane
+spl_dispel          !   2   icon icon_spell_dispel      cast hit_mark_pierce            effect damage_mark_arcane
+
+# traps
+trap_base           !   2   tile trap_square_purple      discharge hit_mark_pierce
+
+# special
+sys_savebook        !   2   tile itm_book_portable       flash itm_book_portable_flash

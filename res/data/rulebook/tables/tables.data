@@ -1,0 +1,15 @@
+# all table .tab files has to be registered here
+labyrinth_table=./res/data/rulebook/tables/labyrinth_table.tab
+treasure_table=./res/data/rulebook/tables/treasure_table.tab
+starter_table=./res/data/rulebook/tables/starter_table.tab
+animation_table=./res/data/rulebook/tables/animation_table.tab
+sound_table=./res/data/rulebook/tables/sound_table.tab
+text_table=./res/data/rulebook/tables/text_table.tab
+combat_table=./res/data/rulebook/tables/combat_table.tab
+affix_table=./res/data/rulebook/tables/affix_table.tab
+status_table=./res/data/rulebook/tables/status_table.tab
+mob_table=./res/data/rulebook/tables/mob_table.tab
+pc_table=./res/data/rulebook/tables/pc_table.tab
+dungeon_table=./res/data/rulebook/tables/dungeon_table.tab
+name_table=./res/data/rulebook/tables/name_table.tab
+spell_table=./res/data/rulebook/tables/spell_table.tab

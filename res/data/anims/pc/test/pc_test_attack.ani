@@ -1,0 +1,16 @@
+# test animation for player character standing idle
+
+tileset=pc_test
+frames_total=3
+rows=1
+cols=3
+width=24
+height=24
+x_margin=0
+x_padding=0
+y_margin=48
+y_padding=0
+rest_time=15
+step=1
+frame_index=0
+transparent=1
